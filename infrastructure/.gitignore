@@ -1,0 +1,14 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+
+# Environment variables
+.env
+
+# CDK context (contains cached account-specific values)
+cdk.context.json
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

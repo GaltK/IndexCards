@@ -1,8 +1,0 @@
-node_modules
-dist
-build
-cdk.out
-coverage
-*.log
-.env
-.env.*

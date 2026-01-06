@@ -1,0 +1,49 @@
+{
+  "environments": {
+    "dev": {
+      "region": "us-east-1",
+      "vpcCidr": "10.0.0.0/16",
+      "enableNatGateway": false,
+      "dbInstanceType": "t3.micro",
+      "dbAllocatedStorage": 20,
+      "dbMultiAz": false,
+      "dbBackupRetention": 1,
+      "dbDeletionProtection": false,
+      "lambdaMemory": 512,
+      "lambdaTimeout": 30,
+      "requireApproval": false,
+      "enableDetailedMonitoring": false,
+      "logRetentionDays": 7
+    },
+    "staging": {
+      "region": "us-east-1",
+      "vpcCidr": "10.1.0.0/16",
+      "enableNatGateway": false,
+      "dbInstanceType": "t3.small",
+      "dbAllocatedStorage": 50,
+      "dbMultiAz": false,
+      "dbBackupRetention": 3,
+      "dbDeletionProtection": false,
+      "lambdaMemory": 1024,
+      "lambdaTimeout": 30,
+      "requireApproval": false,
+      "enableDetailedMonitoring": false,
+      "logRetentionDays": 14
+    },
+    "prod": {
+      "region": "us-east-1",
+      "vpcCidr": "10.2.0.0/16",
+      "enableNatGateway": true,
+      "dbInstanceType": "t3.medium",
+      "dbAllocatedStorage": 100,
+      "dbMultiAz": true,
+      "dbBackupRetention": 7,
+      "dbDeletionProtection": true,
+      "lambdaMemory": 1024,
+      "lambdaTimeout": 30,
+      "requireApproval": true,
+      "enableDetailedMonitoring": true,
+      "logRetentionDays": 30
+    }
+  }
+}
