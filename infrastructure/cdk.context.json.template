@@ -1,7 +1,7 @@
 {
   "environments": {
     "dev": {
-      "region": "us-east-1",
+      "region": "us-west-2",
       "vpcCidr": "10.0.0.0/16",
       "enableNatGateway": false,
       "dbInstanceType": "t3.micro",
@@ -16,7 +16,7 @@
       "logRetentionDays": 7
     },
     "staging": {
-      "region": "us-east-1",
+      "region": "us-west-2",
       "vpcCidr": "10.1.0.0/16",
       "enableNatGateway": false,
       "dbInstanceType": "t3.small",
@@ -31,7 +31,7 @@
       "logRetentionDays": 14
     },
     "prod": {
-      "region": "us-east-1",
+      "region": "us-west-2",
       "vpcCidr": "10.2.0.0/16",
       "enableNatGateway": true,
       "dbInstanceType": "t3.medium",
