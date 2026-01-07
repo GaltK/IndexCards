@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "name": "Documentation Sync",
+  "description": "Monitors all TypeScript source files (*.ts), Python files (*.py), configuration files (package.json, requirements.txt, cdk.json, tsconfig.json), and infrastructure code. When changes are detected, prompts the agent to update relevant documentation in README.md or the /docs folder to reflect the code changes.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.ts",
+      "**/*.py",
+      "**/package.json",
+      "**/requirements.txt",
+      "**/cdk.json",
+      "**/tsconfig.json",
+      "**/*.tsx",
+      "**/*.jsx"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Source code has been modified. Please review the changes and update the documentation accordingly. If there's a /docs folder, update the relevant documentation files there. Otherwise, update the README.md file. Focus on:\n- API changes or new endpoints\n- Configuration changes\n- New features or functionality\n- Architecture or infrastructure changes\n- Updated dependencies or requirements\n- Changes to deployment procedures\n- New environment variables or settings\n\nEnsure the documentation accurately reflects the current state of the codebase."
+  }
+}
