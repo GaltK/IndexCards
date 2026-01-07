@@ -94,8 +94,11 @@ export class NetworkStack extends cdk.Stack {
       exportName: `${this.stackName}-RdsSecurityGroupId`,
     });
 
-    // Add tags for cost tracking
-    cdk.Tags.of(this).add('Project', 'IndexCards');
+    // Add required tags per infrastructure standards
+    cdk.Tags.of(this).add('Product', 'index-cards');
+    cdk.Tags.of(this).add('cost-center', 'web-and-apps');
+    
+    // Add additional tags for resource management
     cdk.Tags.of(this).add('Stack', 'Network');
   }
 }

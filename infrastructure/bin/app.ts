@@ -24,5 +24,8 @@ const networkStack = new NetworkStack(app, `IndexCards-Network-${environmentName
   description: `Network infrastructure for IndexCards platform (${environmentName})`,
 });
 
-// Add environment tag to all resources
+// Apply required tags to all resources (per infrastructure standards)
+cdk.Tags.of(app).add('Product', 'index-cards');
+cdk.Tags.of(app).add('cost-center', 'web-and-apps');
 cdk.Tags.of(app).add('Environment', environmentName);
+cdk.Tags.of(app).add('ManagedBy', 'CDK');

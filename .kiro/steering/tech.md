@@ -11,8 +11,11 @@ Serverless three-tier architecture on AWS with monorepo organization.
 ## Infrastructure
 
 - AWS CDK (TypeScript) for Infrastructure as Code
-- AWS CloudFormation for deployment
 - Monorepo structure: `/infrastructure`, `/backend`, `/frontend`, `/shared`
+- **Required Resource Tags**: All AWS resources must be tagged with:
+  - `Product: index-cards`
+  - `cost-center: web-and-apps`
+- See [infrastructure-standards.md](infrastructure-standards.md) for complete tagging requirements
 
 ## Backend
 
